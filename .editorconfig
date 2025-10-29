@@ -1,0 +1,22 @@
+# .editorconfig
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Makefile wants tabs, leave it alone
+[Makefile]
+indent_style = tab
+
+# Markdown – don’t strip whitespace, or your code blocks die
+[*.md]
+trim_trailing_whitespace = false
+
+# JSON, YAML, HTML, JS, TS, Svelte all use 2 spaces
+[*.{js,ts,json,yaml,yml,html,css,scss,svelte}]
+indent_size = 2

@@ -5,6 +5,7 @@ export const skills = [
   "React",
   "React Native",
   "Node.js",
+  "Svelte",
   "Bun",
   "Next.js",
   "Tailwind CSS",

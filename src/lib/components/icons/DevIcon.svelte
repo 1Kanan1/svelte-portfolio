@@ -17,6 +17,7 @@
   import reactrouter from "./ReactRouter.svelte";
   import postgres from "./Postgres.svelte";
   import redis from "./Redis.svelte";
+  import svelte from "./Svelte.svelte";
 
   let { name, size = "1", class: className = "" } = $props();
 
@@ -38,6 +39,7 @@
     reactrouter,
     postgres,
     redis,
+    svelte,
   };
 
   // Normalize name reactively

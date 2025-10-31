@@ -1,6 +1,7 @@
 <script>
   import DevIcon from "$lib/components/icons/DevIcon.svelte";
   import { skills } from "$lib/data/skills";
+  import * as Tooltip from "$lib/components/shadcn/tooltip/index.js";
 </script>
 
 <section id="skills">
@@ -9,7 +10,16 @@
   <ul class="flex flex-wrap gap-1.5 pt-2 px-2 md:px-4 text-xs">
     {#each skills as skill}
       <li class="flex items-center p-1.5 gap-1 bg-background">
-        <DevIcon name={skill} size="3" />
+        <Tooltip.Provider>
+          <Tooltip.Root delayDuration={0}>
+            <Tooltip.Trigger>
+              <DevIcon name={skill} size="3" />
+            </Tooltip.Trigger>
+            <Tooltip.Content>
+              {skill}
+            </Tooltip.Content>
+          </Tooltip.Root>
+        </Tooltip.Provider>
       </li>
     {/each}
   </ul>

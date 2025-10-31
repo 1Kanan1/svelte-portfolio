@@ -1,7 +1,6 @@
-import { writable, type Writable } from "svelte/store";
-import type { Experience } from "../types/experience";
+import type { Experience } from "$lib/types/experience";
 
-export const experience: Writable<Experience[]> = writable([
+export const experience: Experience[] = [
   {
     id: "andersenlab",
     companyName: "Andersen Lab",
@@ -13,7 +12,7 @@ export const experience: Writable<Experience[]> = writable([
         type: "Full-Time",
         period: {
           start: "08.2025",
-          end: "Present",
+          end: "present",
         },
         responsibilities: [
           "Develop AI Chat and AI Assistant features.",
@@ -41,7 +40,7 @@ export const experience: Writable<Experience[]> = writable([
         type: "Full-Time",
         period: {
           start: "08.2025",
-          end: "Present",
+          end: "present",
         },
         responsibilities: [
           "Develop AI Chat and AI Assistant features.",
@@ -76,7 +75,7 @@ export const experience: Writable<Experience[]> = writable([
         type: "Full-Time",
         period: {
           start: "08.2025",
-          end: "Present",
+          end: "present",
         },
         responsibilities: [
           "Develop AI Chat and AI Assistant features.",
@@ -100,4 +99,4 @@ export const experience: Writable<Experience[]> = writable([
       },
     ],
   },
-]);
+];

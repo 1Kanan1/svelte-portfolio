@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { Component } from "svelte";
-  import andersenlab from "./AndersenLab.svelte";
   import git from "./Git.svelte";
   import javascript from "./JavaScript.svelte";
   import react from "./React.svelte";
@@ -17,7 +16,6 @@
   } = $props();
 
   const icons: Record<string, Component> = {
-    andersenlab,
     git,
     javascript,
     react,

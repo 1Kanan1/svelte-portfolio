@@ -7,13 +7,18 @@
   import redux from "./Redux.svelte";
   import tailwindcss from "./Tailwind.svelte";
   import typescript from "./TypeScript.svelte";
+  import nextjs from "./NextJS.svelte";
+  import shadcnui from "./ShadcnUI.svelte";
+  import python from "./Python.svelte";
+  import nodejs from "./NodeJS.svelte";
+  import bun from "./Bun.svelte";
+  import motion from "./Motion.svelte";
+  import docker from "./Docker.svelte";
+  import reactrouter from "./ReactRouter.svelte";
+  import postgres from "./Postgres.svelte";
+  import redis from "./Redis.svelte";
 
-  let {
-    name,
-    size = "1",
-    color = "currentColor",
-    class: className = "",
-  } = $props();
+  let { name, size = "1", class: className = "" } = $props();
 
   const icons: Record<string, Component> = {
     git,
@@ -23,10 +28,25 @@
     redux,
     tailwindcss,
     typescript,
+    nextjs,
+    shadcnui,
+    python,
+    nodejs,
+    bun,
+    motion,
+    docker,
+    reactrouter,
+    postgres,
+    redis,
   };
 
   // Normalize name reactively
-  const normalized = $derived(name?.trim().toLowerCase().replace(/\s+/g, ""));
+  const normalized = $derived(
+    name
+      ?.trim()
+      .toLowerCase()
+      .replace(/[\/.\s]+/g, ""),
+  );
 
   // Pick correct icon component
   const IconComponent = $derived(icons[normalized]);
@@ -42,14 +62,14 @@
 {#if IconComponent}
   <div
     class={`inline-flex items-center justify-center ${className}`}
-    style="width: {size}rem; height: {size}rem; color: {color};"
+    style="width: {size}rem; height: {size}rem;"
   >
     <IconComponent class="w-full h-full fill-current" />
   </div>
 {:else}
   <div
     class="inline-flex items-center justify-center border border-dashed border-current text-sm"
-    style="width: {size}rem; height: {size}rem; color: {color};"
+    style="width: {size}rem; height: {size}rem;"
   >
     ?
   </div>

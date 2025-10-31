@@ -18,7 +18,7 @@
       </div>
       <!-- Job's list of positions -->
       <section
-        class="relative space-y-4 before:absolute before:left-[.725rem] before:h-full before:w-px before:bg-gray-300"
+        class="relative space-y-4 before:absolute before:left-[.725rem] before:h-full before:w-px before:bg-border"
       >
         {#each record.positions as position (position.id)}
           <Collapsible {position} />

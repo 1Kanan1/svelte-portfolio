@@ -22,7 +22,7 @@
   const sections = ["Skills", "Experience"];
 </script>
 
-<header
+<nav
   class="fixed top-4 left-0 right-0 flex items-center justify-between px-4 py-2 mx-4 sm:mx-auto sm:max-w-xl bg-background border border-border rounded-xl z-1"
 >
   <div class="flex gap-2">
@@ -36,4 +36,4 @@
     {/each}
   </div>
   <ThemeToggle />
-</header>
+</nav>

@@ -4,6 +4,7 @@
   import Experience from "$lib/components/Experience.svelte";
   import Skills from "$lib/components/Skills.svelte";
   import Navbar from "$lib/components/Navbar.svelte";
+  import Footer from "$lib/components/Footer.svelte";
 </script>
 
 <ModeWatcher />
@@ -13,5 +14,6 @@
   <section class="grid mx-auto md:max-w-3xl gap-3">
     <Skills />
     <Experience />
+    <Footer />
   </section>
 </main>

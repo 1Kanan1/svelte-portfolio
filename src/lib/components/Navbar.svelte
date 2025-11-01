@@ -9,7 +9,13 @@
 
     const element = document.querySelector<HTMLElement>(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - 96;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   }
 

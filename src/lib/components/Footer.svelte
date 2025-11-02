@@ -7,11 +7,19 @@
 >
   <section class="flex items-center gap-2">
     <div>Built with Svelte</div>
-    <DevIcon name="svelte" class="text-muted" />
+    <a href="https://svelte.dev" class="h-4" target="_blank">
+      <DevIcon name="svelte" class="text-muted" />
+    </a>
   </section>
   <section>
-    Inspired by <a href="https://chanhdai.com/" class="underline">Chánh Đại</a>
+    Inspired by <a
+      href="https://chanhdai.com/"
+      target="_blank"
+      class="underline">Chánh Đại</a
+    >
     &
-    <a href="https://alshaer.vercel.app/" class="underline">Baraa Alshaer</a>
+    <a href="https://alshaer.vercel.app/" target="_blank" class="underline"
+      >Baraa Alshaer</a
+    >
   </section>
 </footer>

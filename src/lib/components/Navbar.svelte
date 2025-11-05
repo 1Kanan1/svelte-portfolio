@@ -3,17 +3,20 @@
 
   function scrollIntoView(event: MouseEvent) {
     event.preventDefault(); // prevents from updating the URL
-    const target = event.currentTarget as HTMLAnchorElement;
-    const href = target.getAttribute("href");
+    const href = (event.currentTarget as HTMLAnchorElement).getAttribute(
+      "href",
+    );
     if (!href) return;
 
     const element = document.querySelector<HTMLElement>(href);
+    const nav = document.querySelector<HTMLElement>("nav");
     if (element) {
-      const elementPosition =
-        element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - 96;
+      const navHeight = nav ? nav.offsetHeight : 0;
+      const navTop = nav ? nav.getBoundingClientRect().top : 0;
+      const offset = navHeight + navTop;
+
       window.scrollTo({
-        top: offsetPosition,
+        top: element.getBoundingClientRect().top + window.pageYOffset - offset,
         behavior: "smooth",
       });
     }
